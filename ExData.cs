@@ -1,7 +1,7 @@
-class ExekucniPrikazy
+class ExData // Need to rename
 {
-    public string Exko { get; init; }
-    public int Cislo { get; init; }
-    public string Adresat { get; init; }
-    public string KodUkonu { get; init; }
+    public string ExNumber { get; init; }
+    public int NumberOfPossition { get; init; }
+    public string Address { get; init; }
+    public string TypeOfExData { get; init; }
 }

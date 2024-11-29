@@ -11,7 +11,7 @@ class ResultSaver
         await writer.WriteLineAsync();
         foreach (var data in selectedDataList)
         {
-            await writer.WriteLineAsync($"{data.Cislo} {data.Adresat}");
+            await writer.WriteLineAsync($"{data.NumberOfPossition} {data.Address}");
         }
     }
 }
