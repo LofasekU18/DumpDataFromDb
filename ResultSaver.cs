@@ -1,13 +1,14 @@
 class ResultSaver
 {
     // field
+    private string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\vysledek.txt";
 
-    async Task WriteListOfExeAsync(string path, string exko, IEnumerable<ExData> selectedDataList)
+public async Task WriteListOfExeAsync(string exNumber, IEnumerable<ExData> selectedDataList)
 {
-    using (StreamWriter writer = new StreamWriter(path, true))
+    using (StreamWriter writer = new StreamWriter(_path, true))
     {
         await writer.WriteLineAsync();
-        await writer.WriteLineAsync(exko);
+        await writer.WriteLineAsync(exNumber);
         await writer.WriteLineAsync();
         foreach (var data in selectedDataList)
         {

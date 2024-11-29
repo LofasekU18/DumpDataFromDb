@@ -2,7 +2,14 @@ using System.Diagnostics;
 
 class TriggerOfSubApplication
 {
-    //field 
+    private string _processName;
+    private string _filePath;
+
+    public TriggerOfSubApplication()
+{
+    
+}
+
    public async Task StartAndWaitForProcessAsync(string processName, string filePath)
 {
     using (Process process = new Process())
